@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project - 01</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            font-family: Poppins;
+        }
+        body {
+            height: 100vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            /* background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); */
+            background: linear-gradient(135deg, #232526, #414345);
+        }
+        .main {
+            padding: 20px;
+            background-color: white;
+            border: 2px solid red;
+            height: 400px;
+            width: 500px;
+            border-radius: 20px;
+        }
+        button {
+            padding: 10px 15px;
+            background-color: violet;
+            border-radius: 5px;
+        }
+        img {
+            height: 300px;
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <img id="bulb" src="bulbs/dark.png" alt="">
+        <button onclick="change()">Change</button>
+
+    </div>
+
+    <script>
+        var toggle = 0;
+
+        function change () {
+
+            var image = document.getElementById("bulb");
+            
+            if(toggle == 0) {
+                image.src = "bulbs/glow.png";
+                toggle = 1;
+            }
+            else {
+                image.src = "bulbs/dark.png";
+                toggle = 0;             
+            }
+
+        }
+    </script>
+</body>
+</html>
